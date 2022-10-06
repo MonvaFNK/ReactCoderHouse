@@ -1,7 +1,6 @@
-import './Navbar.css';
-import './CartWidget';
-import './CartWidget.css';
-import CartWidget from './CartWidget';
+import './Cart/CartWidget';
+import CartWidget from './Cart/CartWidget';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 return (
@@ -10,12 +9,12 @@ return (
             <h1 className='navbar__titulo'> FNKee Store</h1>
             <div className='navbar__contenedor'>
                 <ul className='navbar__contenedor--items'> 
-                    <div className='navbar__contenedor--items1'><a href=''><li>FrontPage</li></a></div>
-                    <div className='navbar__contenedor--items2'><a href=''><li>Catalogo</li></a></div>
-                    <div className='navbar__contenedor--items3'><a href=''><li>Sobre nosotros</li></a></div>
+                    <Link as={Link} to='/category/FrontPage'><div className='navbar__contenedor--items1'><li>Home</li></div></Link>
+                    <Link as={Link} to='/category/Indumentaria'><div className='navbar__contenedor--items2'><li>Indumentaria</li></div></Link>
+                    <Link as={Link} to='/category/Miscelaneo'><div className='navbar__contenedor--items3'><li>Miscelaneo</li></div></Link>
                 </ul>
             </div>
-            <CartWidget />
+            <CartWidget/>
         </div>
     </header>
 );

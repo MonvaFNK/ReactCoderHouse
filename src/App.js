@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-
+import UserInfo from './components/UserInfo/UserInfo'
 
 function App() {
   return (
@@ -12,11 +12,14 @@ function App() {
       <NavBar />  
       <Routes>
       <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a mi Tienda"}/>} />
+      <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a mi Tienda"}/>} />
       <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Bienvenidos a mi Tienda"}/>} />
       <Route path='/item/:id' element={<ItemDetailContainer/>} />
       <Route path='/cart' element={<Cart/>} />
       <Route path='/checkout' element={<Checkout/>} />
       </Routes>
+      <Cart />
+      <UserInfo />
     </BrowserRouter>
   );
 }

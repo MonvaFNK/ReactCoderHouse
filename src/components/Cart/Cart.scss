@@ -1,0 +1,42 @@
+.cart__container {
+    text-align: center;
+    justify-content: top;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 30%;
+    height: 100%;
+    display:none;
+    background-color: beige;
+    border: 1px black solid;
+    &--close{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 1%;
+        right: 0.5%;
+    }
+    &--buy{
+        position: absolute;
+        bottom: 1%;
+        left: 35%;
+        width: 150px;
+        height: 40px;
+    }
+    &--total{
+        background-color: gray;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        position: absolute;
+        bottom: 9%;
+        left: 5%;
+        border: 1px solid black;
+    }
+    &--contenido {
+
+    }
+}

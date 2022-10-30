@@ -1,8 +1,16 @@
 import {AiOutlineShoppingCart} from 'react-icons/ai';
 
 const CartWidget = () => {
+
+    const handleOpenCart = () => {
+        let item = document.querySelector('.cart__container');
+        item.style.display = 'flex';
+    }
+
 return (
-    <AiOutlineShoppingCart className='cartWidget' />
+    <div onClick={handleOpenCart} >
+        <AiOutlineShoppingCart className='cartWidget' />
+    </div>
 );
 }
 

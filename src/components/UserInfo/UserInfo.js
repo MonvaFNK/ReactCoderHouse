@@ -4,7 +4,7 @@ function UserInfo() {
         comprar.style.display = 'none'
     }
 
-    function myFunction(){
+    function checkoutEnd(){
         alert('Gracias por comprar se le enviara un mail en la brevedad');
         checkoutClose();
     }
@@ -18,7 +18,7 @@ function UserInfo() {
                 <label for="Contacto" className="container__box--contacto">Numero de telefono</label>
                 <input type="text" placeholder="+(54) 1234-5678"/>
                 <button className="container__box--salir" onClick={checkoutClose}>Continuar comprando</button>
-                <button className="container__box--comprar" onClick={myFunction}>Realizar Compra</button>
+                <button className="container__box--comprar" onClick={checkoutEnd}>Realizar Compra</button>
             </div>
         </div>
     )

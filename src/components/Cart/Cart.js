@@ -5,18 +5,29 @@ const Cart = () => {
         item.style.display = 'none';
     }
     const checkout = () =>{
-        let comprar = document.querySelector('.container')
-        comprar.style.display = 'flex'
+        let comprar = document.querySelector('.container');
+        comprar.style.display = 'flex';
+    }
+    const clear = () => {
+        let limpiar = document.querySelector('.cart__container--contenido');
+        limpiar.innerHTML = '';
+        let valor = document.querySelector('.cart__container--total');
+        valor.innerHTML = '0'
     }
     return (
     <div className="cart__container" id="cart__container">
         <h2>Carrito</h2>
-        <div className="cart__container--contenido"></div>
+        <div className="cart__container--contenido">
+
+        </div>
         <button onClick={handleOpenCart} className="cart__container--close">
             X
         </button>
         <button onClick={checkout} className="cart__container--buy">
             Comprar
+        </button>
+        <button onClick={clear} className="cart__container--clear">
+            Limpiar carrito
         </button>
         <div className="cart__container--price">
             <p>Valor total: </p>

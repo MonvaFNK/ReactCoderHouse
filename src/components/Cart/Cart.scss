@@ -22,12 +22,16 @@
     &--buy{
         position: absolute;
         bottom: 1%;
-        left: 35%;
+        left: 55%;
         width: 150px;
         height: 40px;
     }
-    &--total{
-
+    &--clear{
+        position: absolute;
+        bottom: 1%;
+        left: 15%;
+        width: 150px;
+        height: 40px;
     }
     &--price{
         background-color: gray;

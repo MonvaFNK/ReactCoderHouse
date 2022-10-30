@@ -6,6 +6,12 @@ function UserInfo() {
 
     function checkoutEnd(){
         alert('Gracias por comprar se le enviara un mail en la brevedad');
+        let limpiar = document.querySelector('.cart__container--contenido');
+        limpiar.innerHTML = '';
+        let valor = document.querySelector('.cart__container--total');
+        valor.innerHTML = '0'
+        let item = document.querySelector('.cart__container');
+        item.style.display = 'none';
         checkoutClose();
     }
     return (

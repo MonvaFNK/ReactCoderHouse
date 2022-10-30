@@ -3,6 +3,11 @@ function UserInfo() {
         let comprar = document.querySelector('.container')
         comprar.style.display = 'none'
     }
+
+    function myFunction(){
+        alert('Gracias por comprar se le enviara un mail en la brevedad');
+        checkoutClose();
+    }
     return (
         <div className="container">
             <div className="container__box">
@@ -13,7 +18,7 @@ function UserInfo() {
                 <label for="Contacto" className="container__box--contacto">Numero de telefono</label>
                 <input type="text" placeholder="+(54) 1234-5678"/>
                 <button className="container__box--salir" onClick={checkoutClose}>Continuar comprando</button>
-                <button className="container__box--comprar">Realizar Compra</button>
+                <button className="container__box--comprar" onClick={myFunction}>Realizar Compra</button>
             </div>
         </div>
     )

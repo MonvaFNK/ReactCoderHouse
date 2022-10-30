@@ -20,7 +20,6 @@ const ItemDetailContainer = () => {
             item.innerHTML+=  ` <div class="${product.id} product__incart"> ${product.title} 
                                     <div class="${product.id}__quantity spacer">${product__quantity}</div>
                                     <div class="${product.id}__price product__incart--price">${product.price} </div> $ 
-                                    <button class="${product.id}__removeitem">X</button>
                                 </div>`;
         }
         else{

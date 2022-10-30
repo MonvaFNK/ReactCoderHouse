@@ -18,7 +18,11 @@ const Cart = () => {
         <button onClick={checkout} className="cart__container--buy">
             Comprar
         </button>
+        <div className="cart__container--price">
+            <p>Valor total: </p>
             <p className="cart__container--total">0</p>
+            <p> $</p>
+        </div>
     </div>
     );
 }

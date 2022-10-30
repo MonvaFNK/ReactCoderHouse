@@ -4,3 +4,10 @@
 .buttoncart{
     margin: 5px;
 }
+.cart__container--contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}

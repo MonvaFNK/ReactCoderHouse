@@ -11,7 +11,7 @@ const Item = ({product}) => {
             let total = document.querySelector('.cart__container--total');
             let valor = total.innerHTML
             total.innerHTML = parseInt(valor)+parseInt(product.price)
-            item.innerHTML+=  `<div class="${product.id}"> <p>${product.title}</p> <div class="${product.id}__price">${product.price} </div> </div>`;
+            item.innerHTML+=  `<div class="${product.id} product__incart"> ${product.title} <div class="${product.id}__price product__incart--price">${product.price} </div> $ </div>`;
         }
         else{
             let precio = document.querySelector(`.${product.id}__price`);
@@ -19,7 +19,7 @@ const Item = ({product}) => {
             test.innerHTML = parseInt(precio)+parseInt(product.price)
             let total = document.querySelector('.cart__container--total');
             let valor = total.innerHTML
-            total.innerHTML = "Valor:"+parseInt(valor)+parseInt(product.price)+"$";
+            total.innerHTML = (parseInt(valor)+parseInt(product.price));
 
         }
 

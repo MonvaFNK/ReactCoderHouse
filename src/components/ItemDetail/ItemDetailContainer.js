@@ -6,35 +6,6 @@ import Button from 'react-bootstrap/Button';
 
 
 const ItemDetailContainer = () => {
-    let totalQuantity = 1;
-    const agregarCarrito = () => {
-        let item = document.querySelector('.cart__container--contenido');
-        let test = document.querySelector(`.${product.id}__price`)
-        let carrito = document.querySelector('.cart__container');
-        carrito.style.display = 'flex';
-        if (test == null) {
-            let total = document.querySelector('.cart__container--total');
-            let valor = total.innerHTML;
-            let product__quantity = ` x ${totalQuantity++}`
-            total.innerHTML = parseInt(valor) + parseInt(product.price);
-            item.innerHTML += ` <div class="${product.id} product__incart"> ${product.title} 
-                                    <div class="${product.id}__quantity spacer">${product__quantity}</div>
-                                    <div class="${product.id}__price product__incart--price">${product.price} </div> $ 
-                                </div>`;
-            console.log(product__quantity);
-        }
-        else {
-            let precio = document.querySelector(`.${product.id}__price`);
-            precio = precio.innerHTML;
-            test.innerHTML = parseInt(precio) + parseInt(product.price);
-            let total = document.querySelector('.cart__container--total');
-            let valor = total.innerHTML;
-            total.innerHTML = (parseInt(valor) + parseInt(product.price));
-            let product__quantity = `${totalQuantity++}`;
-            document.querySelector(`.${product.id}__quantity`).innerHTML = ` x ${product__quantity}`;
-            console.log(product__quantity);
-        }
-    }
     const [product, setProduct] = useState()
     const { id } = useParams();
 
@@ -45,6 +16,49 @@ const ItemDetailContainer = () => {
             })
             .catch(error => console.warn(error))
     }, [id])
+    
+    let totalQuantity = 1;
+
+    const agregarCarrito = () => {
+        let item = document.querySelector('.cart__container--contenido');
+        let test = document.querySelector(`.${product.id}__price`);
+        let carrito = document.querySelector('.cart__container');
+        carrito.style.display = 'flex';
+        if (test == null) {
+            let total = document.querySelector('.cart__container--total');
+            let valor = total.innerHTML;
+            let product__quantity = ` x ${totalQuantity++}`;
+            total.innerHTML = parseInt(valor) + parseInt(product.price);
+            item.innerHTML += ` <div class="${product.id} product__incart"> ${product.title}
+                                    <div class="${product.id}__quantity spacer">${product__quantity}</div>
+                                    <div class="${product.id}__price product__incart--price">${product.price} </div> $ 
+                                </div>`;
+        }
+        else if(totalQuantity < product.stock){
+            let precio = document.querySelector(`.${product.id}__price`);
+            precio = precio.innerHTML;
+            test.innerHTML = parseInt(precio) + parseInt(product.price);
+            let total = document.querySelector('.cart__container--total');
+            let valor = total.innerHTML;
+            total.innerHTML = (parseInt(valor) + parseInt(product.price));
+            let product__quantity = `${totalQuantity++}`;
+            document.querySelector(`.${product.id}__quantity`).innerHTML = ` x ${product__quantity}`;
+            console.log(totalQuantity)
+        }
+        else {
+            let precio = document.querySelector(`.${product.id}__price`);
+            precio = precio.innerHTML;
+            test.innerHTML = parseInt(precio) + parseInt(product.price);
+            let total = document.querySelector('.cart__container--total');
+            let valor = total.innerHTML;
+            total.innerHTML = (parseInt(valor) + parseInt(product.price));
+            let product__quantity = `${totalQuantity++}`;
+            document.querySelector(`.${product.id}__quantity`).innerHTML = ` x ${product__quantity}`;
+            let btnChangeTxt = document.querySelector('.buttoncart')
+            btnChangeTxt.innerHTML = "Lo lamentamos no hay mas stock"
+            let btndisable = document.querySelector('.buttoncart').disabled = true;
+        }
+    }
 
     return (
         <div className="producto">
@@ -54,7 +68,6 @@ const ItemDetailContainer = () => {
                 Añadir al carrito
             </Button>
         </div>
-
     );
 }
 

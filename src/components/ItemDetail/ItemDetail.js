@@ -16,6 +16,9 @@ const ItemDetail = ({product}) => {
                 {product.price} $
             </Card.Text>
             <Card.Text>
+                {product.stock} stock
+            </Card.Text>
+            <Card.Text>
             {product.description}
             </Card.Text>
             <Link  to={`/`}>

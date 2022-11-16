@@ -15,7 +15,7 @@ const ItemDetail = ({product}) => {
             <Card.Text>
                 {product.price} $
             </Card.Text>
-            <Card.Text>
+            <Card.Text className="${product.id}__stock">
                 {product.stock} stock
             </Card.Text>
             <Card.Text>

@@ -1,3 +1,5 @@
+import {BrowserRouter as Router,Link} from 'react-router-dom';
+
 const Cart = () => {
     
     const handleOpenCart = () => {
@@ -26,9 +28,11 @@ const Cart = () => {
         <button onClick={checkout} className="cart__container--buy">
             Comprar
         </button>
+        <Link to='/' >
         <button onClick={clear} className="cart__container--clear">
             Limpiar carrito
         </button>
+        </Link>
         <div className="cart__container--price">
             <p>Valor total: </p>
             <p className="cart__container--total">0</p>

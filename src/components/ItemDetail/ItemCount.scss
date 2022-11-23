@@ -1,10 +1,10 @@
-.ItemListContainer{
+.itemCountContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    &__titulo{
-        color: black;
-    }
+}
+
+.itemCountContainer div {
+    display: flex;
 }

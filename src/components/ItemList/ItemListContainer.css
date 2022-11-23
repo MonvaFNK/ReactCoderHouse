@@ -1,9 +1,0 @@
-.ItemListContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.ItemListContainer__titulo {
-  color: gray;
-}/*# sourceMappingURL=ItemListContainer.css.map */

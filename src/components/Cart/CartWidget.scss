@@ -1,12 +1,21 @@
+.cartWidgetContainer {
+    position: relative;
+
+}
 .cartWidget {
+    position: relative;
     color: white;
-    background-color: gray;
+    background-color: #583A58;
     border: 1px black solid;
     border-radius: 5px;
     margin-left: 50px;
     margin-right: 50px;
-    height: 42px;
-    width: 30%;
+    font-size: 2rem;
     padding: 4px;
 }
-
+.alertWidget {
+    position: absolute;
+    z-index: 2;
+    top:-30%;
+    right: 28%;
+}

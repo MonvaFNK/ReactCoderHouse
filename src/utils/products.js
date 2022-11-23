@@ -1,8 +1,5 @@
 import { addDoc, collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
 
-
-
-
 export const getAllProducts = () => {
 const database = getFirestore();
 const collectionReference = collection(database, 'items');
@@ -62,15 +59,6 @@ const products = [
     {id:5,category: 'Indumentaria', title: 'mochila', price: 100, pictureUrl: 'https://i.imgur.com/vEFs0eU.jpg',stock: 'number',description: "Mochila de estilo",},
     {id:6,category: 'Indumentaria', title: 'remera', price: 100, pictureUrl: 'https://i.imgur.com/AfLSiY8.jpg',stock: 'number',description: "Remera de tela", },
 ]
-
-/* export const getAllProducts = () => {
-    const promise = new Promise ((resolve) =>{
-        setTimeout(() => {
-            return resolve(products);
-        }, 2000)
-    });
-    return promise;
-}; */
 
 export const createAllProducts = async () => {
     try {

@@ -14,7 +14,7 @@ Este proyecto fue creado con:
 
 ## Demo
  
-![Demo](blob:https://gifcap.dev/ad1ccfff-b725-4f60-8b9c-65bd46e214a7)
+ ![Demo](https://im5.ezgif.com/tmp/ezgif-5-167cd94dc7.gif)
 
 ## Available Scripts
 

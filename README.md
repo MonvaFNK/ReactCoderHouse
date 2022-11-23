@@ -14,7 +14,7 @@ Este proyecto fue creado con:
 
 ## Demo
  
-![Demo](https://i.imgur.com/R14i2jH.mp4)
+![Demo](blob:https://gifcap.dev/ad1ccfff-b725-4f60-8b9c-65bd46e214a7)
 
 ## Available Scripts
 
